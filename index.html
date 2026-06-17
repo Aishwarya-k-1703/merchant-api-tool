@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Merchant Storefront API Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">🛒 Merchant Storefront Tool</div>
+      <p class="tagline">Connect to your store API and browse live product catalog</p>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Search Bar -->
+    <section class="search-section">
+      <div class="search-box">
+        <select id="categorySelect">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="jewelery">Jewelery</option>
+          <option value="men's clothing">Men's Clothing</option>
+          <option value="women's clothing">Women's Clothing</option>
+        </select>
+        <button id="fetchBtn" onclick="fetchProducts()">🔍 Fetch Products</button>
+        <button id="errorBtn" onclick="simulateError()">⚠️ Test API Failure</button>
+      </div>
+    </section>
+
+    <!-- Status Banner -->
+    <div id="statusBanner" class="banner hidden"></div>
+
+    <!-- Stats Bar -->
+    <div id="statsBar" class="stats-bar hidden">
+      <span id="statsText"></span>
+      <span id="apiStatus" class="api-status">● API Connected</span>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loader" class="loader hidden">
+      <div class="spinner"></div>
+      <p>Fetching merchant catalog...</p>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="product-grid"></div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="empty-state hidden">
+      <p>🗂️ No products found. Try a different category.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Merchant Storefront API Integration Tool &nbsp;|&nbsp; Built by Aishwarya K &nbsp;|&nbsp; Powered by FakeStore API</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
